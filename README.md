@@ -3,6 +3,9 @@
 
 Atividade Git e Github
 
+Dupla: [Erlon](https://github.com/ejrgeek/) e [Lucas](https://github.com/Lu342)
+
+-----
 - A atividade será o desenvolvimento de um pequeno sistema de agenda telefonica com nome e telefone (CRUD)
 - A equipe será composta por 2 integrantes (Dev 1 e Dev2)
 - Poderá ser utilizado em banco de dados ou memória (lista)
