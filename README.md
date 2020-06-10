@@ -11,8 +11,7 @@ Dupla: [Erlon](https://github.com/ejrgeek/) e [Lucas](https://github.com/Lu342)
 - Poderá ser utilizado em banco de dados ou memória (lista)
 - Descrição
 
-	- Os desenvolvedores devem elaborar em conjunto o diagrama de classes da atividade, bem como dividir as atividades entre os dois
-
+	- Os desenvolvedores devem elaborar em conjunto o [diagrama de classes da atividade](https://drive.google.com/file/d/1Uv0x54GgCugM26xdnCnfTGls4_SdLdnF/view?usp=sharing), bem como dividir as atividades entre os dois
 	- O dev 1 irá criar um repositório remoto no Github com o projeto definido
 	- O dev 2 irá clonar o projeto para sua máquina
 	- Cada repositório do desenvolvedor deverá conter 3 branchs
