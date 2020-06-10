@@ -31,7 +31,7 @@ public class AgendaService {
 
     public boolean removeContatoNome(String nome){
         try {
-            listaContatos.removeIf(contato -> contato.numero.equals(nome));
+            listaContatos.removeIf(contato -> contato.nome.equals(nome));
             return true;
         }catch (Exception e){
             System.err.print(e);

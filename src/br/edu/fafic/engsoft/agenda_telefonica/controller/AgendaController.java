@@ -38,10 +38,10 @@ public class AgendaController {
     public void buscar(String value, String token){
         switch (token.toLowerCase()){
             case "nome":
-                agendaService.buscarContatoNome(value);
+                System.out.println(agendaService.buscarContatoNome(value));
                 break;
             case "numero":
-                agendaService.buscarContatoNumero(value);
+                System.out.println(agendaService.buscarContatoNumero(value));
                 break;
             default:
                 break;
@@ -53,6 +53,6 @@ public class AgendaController {
     }
 
     public void totalContatos(){
-        System.out.println(agendaService.total());
+        System.out.println("Total de contatos:" + agendaService.total());
     }
 }
