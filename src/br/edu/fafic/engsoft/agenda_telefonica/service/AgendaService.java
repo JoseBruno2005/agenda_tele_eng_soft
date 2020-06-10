@@ -8,7 +8,7 @@ public class AgendaService {
 
     ArrayList<ContatoModel> listaContatos = new ArrayList<>();
 
-    boolean addContato(String nome, String numero){
+    public boolean addContato(String nome, String numero){
         ContatoModel contatoModel = new ContatoModel(nome, numero);
         try {
             listaContatos.add(contatoModel);
@@ -19,7 +19,7 @@ public class AgendaService {
         }
     }
 
-    boolean removeContato(String numero){
+    public boolean removeContatoNumero(String numero){
         try {
             listaContatos.removeIf(contato -> contato.numero.equals(numero));
             return true;
@@ -29,7 +29,17 @@ public class AgendaService {
         }
     }
 
-    int total(){
+    public boolean removeContatoNome(String nome){
+        try {
+            listaContatos.removeIf(contato -> contato.numero.equals(nome));
+            return true;
+        }catch (Exception e){
+            System.err.print(e);
+            return false;
+        }
+    }
+
+    public int total(){
         return listaContatos.size();
     }
 
