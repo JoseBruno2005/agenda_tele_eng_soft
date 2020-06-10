@@ -8,4 +8,12 @@ public class ContatoModel {
         this.nome = nome;
         this.numero = numero;
     }
+
+    @Override
+    public String toString() {
+        return "ContatoModel{" +
+                "nome='" + nome + '\'' +
+                ", numero='" + numero + '\'' +
+                '}';
+    }
 }
