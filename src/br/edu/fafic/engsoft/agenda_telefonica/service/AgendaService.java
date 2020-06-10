@@ -44,15 +44,26 @@ public class AgendaService {
     }
 
     public String buscarContatoNome(String nome){
-        return null;
+        for (ContatoModel contato: listaContatos) {
+            if(contato.nome.equals(nome)){
+                return contato.numero;
+            }
+        }
+        return "Nenhum contato com esse nome";
     }
 
     public String buscarContatoNumero(String numero){
-        return null;
+        for (ContatoModel contato: listaContatos) {
+            if(contato.numero.equals(numero)){
+                return contato.nome;
+            }
+        }
+
+        return "Nenhum contato com esse numero";
     }
 
-    public ArrayList<ContatoModel> mostrar(){
-        return null;
+    public void mostrar(){
+        listaContatos.forEach(System.out::println);
     }
 
 }
