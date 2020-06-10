@@ -33,5 +33,16 @@ public class AgendaService {
         return listaContatos.size();
     }
 
+    public String buscarContatoNome(String nome){
+        return null;
+    }
+
+    public String buscarContatoNumero(String numero){
+        return null;
+    }
+
+    public ArrayList<ContatoModel> mostrar(){
+        return null;
+    }
 
 }
