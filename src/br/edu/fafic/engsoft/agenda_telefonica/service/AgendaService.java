@@ -28,4 +28,10 @@ public class AgendaService {
             return false;
         }
     }
+
+    int total(){
+        return listaContatos.size();
+    }
+
+
 }
