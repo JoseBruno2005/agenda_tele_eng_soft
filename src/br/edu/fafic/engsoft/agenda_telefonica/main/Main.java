@@ -1,33 +1,42 @@
 package br.edu.fafic.engsoft.agenda_telefonica.main;
 
-import br.edu.fafic.engsoft.agenda_telefonica.controller.AgendaController;
-import br.edu.fafic.engsoft.agenda_telefonica.service.AgendaService;
+import br.edu.fafic.engsoft.agenda_telefonica.controller.DeleteContactController;
+import br.edu.fafic.engsoft.agenda_telefonica.controller.ListContactController;
+import br.edu.fafic.engsoft.agenda_telefonica.controller.SaveContactController;
+import br.edu.fafic.engsoft.agenda_telefonica.model.Contact;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        AgendaController controller = new AgendaController();
+        List<Contact> listOfContacts = new ArrayList<>();
 
-        controller.adicionar("Erlon", "999909409");
-        controller.adicionar("Lucas", "999909410");
-        controller.adicionar("Davina", "999909411");
-        controller.adicionar("Valesca", "999909412");
-        controller.adicionar("Mony", "999909413");
-        controller.adicionar("Yuri", "999909414");
-        controller.mostrarAgenda();
+        SaveContactController saveContactController = new SaveContactController(listOfContacts);
+        ListContactController listContactController = new ListContactController(listOfContacts);
+        DeleteContactController deleteContactController = new DeleteContactController(listOfContacts);
 
-        controller.totalContatos();
+        saveContactController.handleSaveContact("Erlon", "999909409");
+        saveContactController.handleSaveContact("Lucas", "999909410");
+        saveContactController.handleSaveContact("Davina", "999909411");
+        saveContactController.handleSaveContact("Valesca", "999909412");
+        saveContactController.handleSaveContact("Mony", "999909413");
+        saveContactController.handleSaveContact("Yuri", "999909414");
 
-        controller.buscar("Erlon", "nome");
-        controller.buscar("999909410", "numero");
+        listContactController.handleShowAllContacts();
 
-        controller.remover("Mony", "nome");
-        controller.totalContatos();
+        listContactController.handleShowTotalOfContacts();
 
-        controller.remover("999909412", "numero");
-        controller.totalContatos();
+        listContactController.handleShowContact("Erlon", "nome");
+        listContactController.handleShowContact("999909410", "numero");
 
-        controller.mostrarAgenda();
+        deleteContactController.handleDeleteContact("Mony", "nome");
 
+        listContactController.handleShowTotalOfContacts();
 
+        deleteContactController.handleDeleteContact("999909412", "numero");
+        listContactController.handleShowTotalOfContacts();
+
+        listContactController.handleShowAllContacts();
     }
 }
