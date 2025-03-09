@@ -10,7 +10,9 @@ public class SaveContactController {
     private SaveContactService saveContactService;
 
     public SaveContactController(List<Contact> listOfContacts) {
+
         this.listOfContacts = listOfContacts;
+        this.saveContactService = new SaveContactService();
     }
 
     private boolean isValidContact(String value, int minLen){

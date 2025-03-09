@@ -10,7 +10,9 @@ public class ListContactController {
     private ListContactService listContactService;
 
     public ListContactController(List<Contact> listOfContacts) {
+
         this.listOfContacts = listOfContacts;
+        this.listContactService = new ListContactService();
     }
 
     public void handleShowContact(String contact, String token){

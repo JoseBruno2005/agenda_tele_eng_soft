@@ -10,7 +10,9 @@ public class DeleteContactController {
     private DeleteContactService deleteContactService;
 
     public DeleteContactController(List<Contact> listOfContacts) {
+
         this.listOfContacts = listOfContacts;
+        this.deleteContactService = new DeleteContactService();
     }
 
     public void handleDeleteContact(String contact, String token){
