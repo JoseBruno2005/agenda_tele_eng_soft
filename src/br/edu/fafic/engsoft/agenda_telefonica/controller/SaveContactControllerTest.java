@@ -1,7 +1,6 @@
 package br.edu.fafic.engsoft.agenda_telefonica.controller;
 
 import br.edu.fafic.engsoft.agenda_telefonica.model.Contact;
-import br.edu.fafic.engsoft.agenda_telefonica.service.SaveContactService;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -15,24 +15,22 @@ public class ListContactController {
         this.listContactService = new ListContactService();
     }
 
-    public void handleShowContact(String contact, String token){
-        switch (token.toLowerCase()){
+    public String handleShowContact(String contact, String token){
+        switch (token.toLowerCase()) {
             case "nome":
-                System.out.println(listContactService.showContactByName(contact, listOfContacts).toString());
-                break;
+                return listContactService.showContactByName(contact, listOfContacts).toString();
             case "numero":
-                System.out.println(listContactService.showContactByNumber(contact, listOfContacts).toString());
-                break;
+                return listContactService.showContactByNumber(contact, listOfContacts).toString();
             default:
-                break;
+                return null;
         }
     }
 
-    public void handleShowAllContacts(){
-        listContactService.showAllContacts(listOfContacts);
+    public String handleShowAllContacts(){
+        return listContactService.showAllContacts(listOfContacts);
     }
 
-    public void handleShowTotalOfContacts(){
-        System.out.println("Total de contatos:" + listContactService.totalOfContacts(listOfContacts));
+    public int handleShowTotalOfContacts(){
+        return listContactService.totalOfContacts(listOfContacts);
     }
 }
